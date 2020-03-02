@@ -1,0 +1,50 @@
+body {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: gray;
+  }
+  .map {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    background-color: silver;
+    box-sizing: border-box;
+  }
+  .pin {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .map::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: green;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .map::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: green;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
